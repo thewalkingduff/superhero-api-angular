@@ -17,9 +17,9 @@ export class SearchBarComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    this.router.navigate(['herosearch', form.value.herosearch]) 
+    // this.router.navigate(['herosearch', form.value.herosearch]) 
     console.log('form.value.herosearch: ', form.value.herosearch)
-    // window.location.replace(`https://www.superheroapi.com/api.php/4453976851349617/search/${form.value.search}`)
+    window.location.replace(`https://www.superheroapi.com/api.php/4453976851349617/search/${form.value.search}`)
   }
 
 }
