@@ -13,10 +13,10 @@ const routes: Routes = [
   //   path: 'search/:superhero-search',
   //   component: HomeComponent
   // },
-  // {
-  //   path: 'details/:id',
-  //   component: DetailsComponent 
-  // },
+  {
+    path: 'details/:id',
+    component: DetailsComponent 
+  },
   {
     path: 'herosearch/:superhero-search',
     component: NameSearchComponent

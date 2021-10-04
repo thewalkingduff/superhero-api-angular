@@ -47,7 +47,7 @@ export class HttpService {
   }
 
   getSuperHero(name: string): Observable<SuperHero> {
-    const superHeroBio = this.http.get(`https://www.superheroapi.com/api/4453976851349617/search/${name}`);
+    const superHeroBio = this.http.get(`https://evening-taiga-63642.herokuapp.com/https://www.superheroapi.com/api/4453976851349617/search/${name}`);
 
     return forkJoin({
       superHeroBio,
