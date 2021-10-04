@@ -1,0 +1,39 @@
+<div class="details">
+  <div class="superhero-banner">
+    <img
+      class="superhero-banner-img"
+      src="{{ superhero.images.sm }}"
+      alt="background image"
+    />
+  </div>
+  <div class="superhero-content">
+    <div class="details-wrapper">
+      <div class="superhero-header">
+        <h1 class="superhero-header-title">{{ superhero.name }}</h1>
+        <h2 class="superhero-header-alighnment">
+          Alignment: {{ superhero.biography.alignment }}
+        </h2>
+        <h2 class="superhero-header-alighnment">
+          Intellegence: {{ superhero.powerstats.intelligence }}
+        </h2>
+        <h2 class="superhero-header-alighnment">
+          Strength: {{ superhero.powerstats.strength }}
+        </h2>
+        <h2 class="superhero-header-alighnment">
+          Speed: {{ superhero.powerstats.speed }}
+        </h2>
+        <h2 class="superhero-header-alighnment">
+          Durability: {{ superhero.powerstats.durability }}
+        </h2>
+        <h2 class="superhero-header-alighnment">
+          Power: {{ superhero.powerstats.power }}
+        </h2>
+        <h2 class="superhero-header-alighnment">
+          Combat: {{ superhero.powerstats.combat }}
+        </h2>
+  
+      </div>
+      <!-- <app-superhero-tabs [superhero]="superhero"></app-superhero-tabs> -->
+    </div>
+  </div>
+</div>

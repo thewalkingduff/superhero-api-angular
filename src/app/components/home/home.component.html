@@ -1,0 +1,38 @@
+<!-- <div class="filters">
+  <mat-form-field>
+    <mat-label>Sort</mat-label>
+      <mat-select
+        panelClass="sort-select"
+        [(ngModel)]="sort"
+        (selectionChange)="searchSuperHeroes(sort)"
+      >
+        <mat-option value="good">SuperHeroes</mat-option>
+        <mat-option value="-bad">Villains</mat-option>
+        <mat-option value="-name">Name</mat-option>
+        <mat-option value="-gender">Gender</mat-option>
+        <mat-option value="-intelligence">Intelligence</mat-option>
+        <mat-option value="-strength">Strength</mat-option>
+        <mat-option value="-speed">Speed</mat-option>
+        <mat-option value="power">Power</mat-option>
+      </mat-select>
+  </mat-form-field> -->
+
+
+  <div class="superheroes">
+    <ng-container *ngFor="let superhero of superheroes">
+      <div class="superhero" (click)="openSuperHeroDetails(superhero.id)">
+        <div class="superhero-thumb-container">
+            <img 
+            *ngIf="superhero.images"
+            src="{{superhero.images.sm}}"
+            alt="thumbnail"
+            class="superhero-thumbnail"
+            />
+          <p *ngIf="!superhero.images">No Image</p>
+        </div>
+        <div class="superhero-description">
+            <p class="superhero-name">{{superhero.name}}</p>
+        </div>
+      </div>
+  </ng-container>
+</div>

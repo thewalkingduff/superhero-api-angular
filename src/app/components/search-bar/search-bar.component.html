@@ -1,0 +1,12 @@
+<div class="search-container">
+    <form class="search-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <span class="logo" routerLink="/">SuperHeroes</span>
+      <input
+        class="search-input"
+        name="herosearch"
+        ngModel
+        placeholder="Get all SuperHeroes and Villians data from all universes"
+      />
+      <button class="search-button">Search</button>
+    </form>
+  </div>
