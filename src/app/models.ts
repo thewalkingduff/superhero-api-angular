@@ -3,6 +3,7 @@ export interface SuperHero {
     name: string;
     images: {
         sm: string;
+        lg: string;
     }
     image: {
         url: string;
@@ -20,7 +21,6 @@ export interface SuperHero {
         power: number;
         combat: number; 
     },
-
 
   }
   

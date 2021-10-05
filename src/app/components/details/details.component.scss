@@ -4,30 +4,6 @@
   position: relative;
 }
 
-.details {
-  ::ng-deep mwl-gauge {
-    width: 150px;
-    height: 150px;
-    display: block;
-    padding: 10px;
-
-    .dial {
-      stroke-width: 10;
-    }
-
-    .value {
-      stroke-dasharray: none;
-      stroke-width: 13;
-    }
-
-    .value-text {
-      fill: #fff;
-      font-weight: 700;
-      font-size: 24px;
-    }
-  }
-}
-
 .superhero {
   &-banner {
     height: 442px;
@@ -69,7 +45,7 @@
 button {
   border: none;
   outline: none;
-  background: #3f51b5;
+  background: #51798a;
   padding: 15px;
   border-left: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 5px;
@@ -79,8 +55,8 @@ button {
   cursor: pointer;
 
   &:hover {
-    color: #3f51b5;
+    color: #71a8bf;
     background-color: #fff;
-    border: 1px solid #3f51b5;
+    border: 1px solid #71a8bf;
   }
 }
