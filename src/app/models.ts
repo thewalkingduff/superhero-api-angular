@@ -4,6 +4,9 @@ export interface SuperHero {
     images: {
         sm: string;
     }
+    image: {
+        url: string;
+    }
     
     biography: {
         alignment: string;

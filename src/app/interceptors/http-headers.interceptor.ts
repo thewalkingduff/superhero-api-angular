@@ -12,8 +12,11 @@ export class HttpHeadersInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<any>> {
     req = req.clone({
       setHeaders: {
-        'x-superhero-key': '4453976851349617',
-        'x-superhero-host': 'https://www.superheroapi.com/api/4453976851349617',
+        'key': '4453976851349617',
+        'host': 'https://www.superheroapi.com/api',
+      },
+      setParams: {
+        key: '4453976851349617'
       }
     });
     return next.handle(req);

@@ -16,7 +16,6 @@ import { HomeComponent } from './components/home/home.component';
 import { HttpHeadersInterceptor } from './interceptors/http-headers.interceptor';
 import { HttpErrorsInterceptor } from './interceptors/http-errors.interceptor';
 import { DetailsComponent } from './components/details/details.component';
-import { NameSearchComponent } from './components/name-search/name-search.component';
 
 
 @NgModule({
@@ -25,7 +24,6 @@ import { NameSearchComponent } from './components/name-search/name-search.compon
     SearchBarComponent,
     HomeComponent,
     DetailsComponent,
-    NameSearchComponent
   ],
   imports: [
     BrowserModule,

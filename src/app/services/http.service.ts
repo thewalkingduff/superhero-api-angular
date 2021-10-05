@@ -27,13 +27,13 @@ export class HttpService {
       // console.log('params in http.service.ts', params)
       console.log('search in http.service.ts', search)
     } else{
-      return this.http.get<APIResponse<SuperHero>>(`https://evening-taiga-63642.herokuapp.com/https://akabab.github.io/superhero-api/api/all.json`);
+      return this.http.get<APIResponse<SuperHero>>(`${env.BASE_URL}/all.json`);
     }
   }
 
 
   getSuperHeroDetails(id: string): Observable<SuperHero> {
-    const superHeroInfoRequest = this.http.get(`https://evening-taiga-63642.herokuapp.com/https://akabab.github.io/superhero-api/api/id/${id}.json`);
+    const superHeroInfoRequest = this.http.get(`${env.BASE_URL}/id/${id}.json`);
 
     return forkJoin({
       superHeroInfoRequest,
@@ -46,19 +46,40 @@ export class HttpService {
     );
   }
 
-  getSuperHero(name: string): Observable<SuperHero> {
-    const superHeroBio = this.http.get(`https://evening-taiga-63642.herokuapp.com/https://www.superheroapi.com/api/4453976851349617/search/${name}`);
-
+  getSuperHero(id: string): Observable<SuperHero> {
+    const superHeroInfoRequest = this.http.get(`${env.BASE_URL}/id/${id}.json`);
     return forkJoin({
-      superHeroBio,
+      superHeroInfoRequest,
     }).pipe(
       map((resp: any) => {
         return {
-          ...resp['superHeroBio'],
+          ...resp['superHeroInfoRequest'],
         };
       })
     );
   }
+
+  // getSuperHero(name: string): Observable<SuperHero> {
+  //   const superHeroBio = this.http.get(`${env.BASE_URL}/search/${name}`);
+  //   console.log('got superHeroBio!:,', superHeroBio)
+ 
+  //   return forkJoin({
+  //     superHeroBio,
+  //   }).pipe(
+  //     map((resp: any) => {
+  //       return {
+  //         ...resp['superHeroBio'],
+  //       };
+  //     })
+  //   );
+  // }
+
+  // getSuperHero(name: string):  {
+  //   const superHeroBio = this.http.get(`${env.BASE_URL}/search/${name}`);
+  //   console.log('got superHeroBio!: ', superHeroBio)
+ 
+    
+  // }
   
 }
 
