@@ -58,7 +58,7 @@
   font-size: 1.25rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 550px) {
   .search {
     &-input {
       margin-left: 5px;
@@ -71,6 +71,7 @@
     }
   }
 }
+
 @media screen and (max-width: 480px) {
   .logo {
     margin: 0 0px;
