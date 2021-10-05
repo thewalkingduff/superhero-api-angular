@@ -32,11 +32,13 @@ export class HomeComponent implements OnInit, OnDestroy {
       .getSuperHeroList(id, search)
       .subscribe((superHeroList: APIResponse<SuperHero>) => {
         this.superheroes = superHeroList;
-        console.log('superHeroList: ', superHeroList);
+
+        
         this.superheroes.map((superhero: any) => {
           let lowerCaseSearchedName = id.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').toLowerCase()
           let lowerCaseMatchedHero = superhero.name.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').toLowerCase()
-        // console.log('oneHero: ', superhero.name);
+          
+        // if searched hero name matches an existing hero name then the id superhero is sent to openSuperHeroDetails
         if(lowerCaseSearchedName === lowerCaseMatchedHero) {
           this.openSuperHeroDetails(superhero.id)
         }

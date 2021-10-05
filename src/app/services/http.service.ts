@@ -12,13 +12,11 @@ import { APIResponse, SuperHero } from '../models';
 export class HttpService {
 
   constructor(private http: HttpClient) { }
-
+  // shows long list of SuperHeroes on homepage
   getSuperHeroList(
     id?: string,
     search?: string
-
   ): Observable<APIResponse<SuperHero>> {
-    console.log('search in http.service.ts', search)
     if (null) {
     } else{
       return this.http.get<APIResponse<SuperHero>>(`${env.BASE_URL}/all.json`);
@@ -26,9 +24,9 @@ export class HttpService {
   }
 
 
+  // when you click on a SuperHero or Search for a SuperHero
   getSuperHeroDetails(id: string): Observable<SuperHero> {
     const superHeroInfoRequest = this.http.get(`${env.BASE_URL}/id/${id}.json`);
-
     return forkJoin({
       superHeroInfoRequest,
     }).pipe(
